@@ -1,0 +1,54 @@
+# requirements.txt - project dependencies for RAG app + QLoRA training
+# NOTE: For CUDA-enabled Torch, install the correct torch wheel from pytorch.org for your CUDA version
+# (e.g., pip install torch --index-url https://download.pytorch.org/whl/cu121). The line below installs CPU-only torch.
+torch>=2.2.0
+
+# Core app + RAG
+streamlit>=1.12
+python-dotenv>=1.0.0
+langchain>=0.0.312
+langchain-community>=0.1.9
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
+pypdf>=3.15
+pdfplumber>=0.11.5
+tqdm>=4.65
+
+# LLM clients & APIs (keep them if you use Groq, Ollama, or OpenAI)
+openai>=1.0.0
+# groq and ollama may be optional; install only if you use those services
+groq>=0.16.0; extra == "groq"
+ollama>=0.4.7; extra == "ollama"
+
+# Hugging Face stack & finetuning (QLoRA/LoRA)
+transformers>=4.35
+huggingface-hub>=0.17
+datasets>=2.14
+accelerate>=0.20
+bitsandbytes>=0.39.0
+peft>=0.6.0
+
+# Tokenizers and training utils
+sentencepiece>=0.1.99
+
+# Utilities
+pandas>=2.0
+numpy>=1.25
+requests>=2.32
+typing_extensions>=4.5
+
+# Core
+torch>=2.1.0
+transformers>=4.39.0
+datasets>=2.18.0
+accelerate>=0.28.0
+bitsandbytes>=0.43.0
+peft>=0.10.0
+
+# Logging & Monitoring
+tensorboard>=2.15.0
+
+# Optional (useful utilities)
+sentencepiece>=0.1.99
+protobuf>=4.25.0
+
